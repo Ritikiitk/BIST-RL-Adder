@@ -10,10 +10,10 @@ The architecture integrates a low-transition Bit Swapping Linear
 Feedback Shift Register (BS-LFSR) for pseudorandom pattern
 generation and a Multiple Input Signature Register (MISR) for
 compact response analysis.
-The reversible adder serves as the
-Circuit Under Test (CUT), targeting minimal energy dissipation
+
+The reversible adder serves as the Circuit Under Test (CUT), targeting minimal energy dissipation
 while ensuring high test coverage. The design is described in
-Verilog and implemented on the Xilinx Vivado platform. Experi-
+Verilog and implemented on the Xilinx Vivado platform. Experi
 mental results show that the proposed BIST framework achieves
 a 13.61% reduction in power consumption and a power saving
 of approximately 0.5 W compared to conventional LFSR-based
