@@ -23,26 +23,29 @@ fault detection efficiency with minimal area and performance
 overhead, demonstrating the suitability of the approach for
 energy-efficient, self-testable logic systems.
 
+![Image](https://github.com/user-attachments/assets/e24d6a6e-49ea-4387-b516-1850e4fd1ddc)
+
 1. Design of Reversible Logic Adder
 A reversible full adder circuit is designed using Fredkin and Peres gates, which are chosen for their
 low gate count and quantum cost efficiency to ensures no fan-out and feedback, adhering to the
 fundamental constraints of reversible logic circuits.
+
 2. Integration of BIST Architecture
- The BIST architecture is implemented around the reversible adder (Circuit Under Test - CUT).
- Utilization of low transition Linear Feedback Shift Register (LFSR) also called as BS-LFSR as
+A) The BIST architecture is implemented around the reversible adder (Circuit Under Test - CUT).
+B) Utilization of low transition Linear Feedback Shift Register (LFSR) also called as BS-LFSR as
 the test pattern generator, generating pseudorandom patterns to stimulate the CUT.
- A Multiple Input Signature Register (MISR) is employed to compact the output responses into a
+C) A Multiple Input Signature Register (MISR) is employed to compact the output responses into a
 final signature, which is compared against a reference( Golden code) to detect faults.
-Page 2
- The architecture is designed to operate in both normal and test modes using multiplexers and
+
+D) The architecture is designed to operate in both normal and test modes using multiplexers and
 control signals.
 3. Fault Modeling
 The CUT is analyzed for common fault models applicable to reversible logic, including stuck-at
 faults and bridging faults. Simulation is conducted to validate the fault coverage of the proposed
 BIST structure.
 4. Implementation and Performance Analysis on Xilinx Vivado
- The complete BIST integrated reversible adder is described in Verilog and synthesized using
+A) The complete BIST integrated reversible adder is described in Verilog and synthesized using
 Xilinx Vivado. The RTL design is verified through simulation to ensure correct logical behavior.
- Static timing analysis identified propagation delays and timing violations. Power reports
+B) Static timing analysis identified propagation delays and timing violations. Power reports
 highlighted dynamic and static power usage. Resource utilization metrics, including LUTs, flipflops,
 and I/Os, assessed area efficiency on the FPGA.
